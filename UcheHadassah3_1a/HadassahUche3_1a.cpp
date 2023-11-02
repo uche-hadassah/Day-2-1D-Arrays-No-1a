@@ -7,20 +7,35 @@ int main()
 {
 	int Original[10];
 	int Copy[10];
+	int num;
 	cout << "Enter 10 positive numbers:";
-	for (int i = 0; i < 10; i++)// Get 10 numbers from user
+	do
 	{
-		cin >> Original[i];
-	}
-	for (int j = 0; j < 10; j++)//Copy the  array
-	{
-		Copy[j] = Original[j];
-	}
-	cout << "The new array is: " << endl;
-	for (int k = 0; k < 10; k++)//Outputs the copied array
-	{
-		cout << Copy[k] << " ";
-	}
+		cin >> num;
+		if (num < 0)
+		{
+			cout << "invalid!";
+			cout << "Enter a POSITIVE number:";
+			cin >> num;
+		}
+		else
+		{
+			for (int i = 0; i < 10; i++)// Get 10 numbers from user
+			{
+				Original[i] = num;
+			}
+			for (int j = 0; j < 10; j++)//Copy the  array
+			{
+				Copy[j] = Original[j];
+			}
+			cout << "The new array is: " << endl;
+			for (int k = 0; k < 10; k++)//Outputs the copied array
+			{
+				cout << Copy[k] << " ";
+			}
+		}
+		
+	} while (num > -1);
 	cout << endl;
 	return 0;
 }
