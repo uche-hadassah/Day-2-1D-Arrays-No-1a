@@ -1,6 +1,5 @@
-/*Copying an array:
-a) Write a program that reads 10 positive numbers from the user into an array and 
-copies it in another array. The program should output the copied array.*/
+/*Name:Uche Hadassah
+This program reads 10 positive numbers from the user and stores it in a new array, then it outputs the new array*/
 #include<iostream>
 using namespace std;
 int main()
@@ -12,17 +11,17 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		int num;
-		cin >> num;
-		while (num < 0)
+		cin >> num;//Receives the numbers from the user
+		while (num < 0)//Does tthis as long as num < -1
 		{
 			cout << "Invalid! Please enter a POSITIVE number:";
 				cin >> num;
 		}
-		Original[i] = num;
-		Copy[i] = Original[i];
+		Original[i] = num;//The number is registered in the original array
+		Copy[i] = Original[i];//Its equivalent is registered in the copy
 	}
 	cout << "The copied array is:";
-	for (int j = 0; j < 10; j++)
+	for (int j = 0; j < 10; j++)//Out put the copied array
 	{
 		cout << Copy[j] << " ";
 	}
