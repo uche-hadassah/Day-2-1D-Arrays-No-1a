@@ -21,5 +21,11 @@ int main()
 		Original[i] = num;
 		Copy[i] = Original[i];
 	}
+	cout << "The copied array is:";
+	for (int j = 0; j < 10; j++)
+	{
+		cout << Copy[j] << " ";
+	}
+	cout << endl;
 	return 0;
 }
